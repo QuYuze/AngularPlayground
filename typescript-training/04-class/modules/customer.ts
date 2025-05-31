@@ -1,4 +1,4 @@
- class Customer{
+ export class Customer{
     
     //private var only accesibles within class scope
     //by convention, leading under score means interna; variables
@@ -30,9 +30,3 @@
     }
 
  }
-
- let customer: Customer = new Customer("Matt", "Qu");
- console.log(customer.firstName + " " +customer.lastName);
- customer.firstName = "Shelly";
- customer.lastName = "Wang";
- console.log(customer.firstName + " " +customer.lastName);

@@ -1,8 +1,13 @@
- class Customer{
+ class CustomerSimpleConstructor{
     
     //private var only accesibles within class scope
     //by convention, leading under score means interna; variables
     
+
+    //simpler way of writing constructor
+    /*
+    instead of this
+
     private _firstName: string;
     private _lastName: string;
 
@@ -10,6 +15,13 @@
         this._firstName = theFirst;
         this._lastName = theLast;
     }
+
+        Do this: 
+    */
+
+   constructor(private _firstName: string, private _lastName: string){
+
+   }
 
     // we use accessor, format: get/set property()
     //  externally, we will only able to use the properties states in the accessors
@@ -31,8 +43,8 @@
 
  }
 
- let customer: Customer = new Customer("Matt", "Qu");
- console.log(customer.firstName + " " +customer.lastName);
- customer.firstName = "Shelly";
- customer.lastName = "Wang";
- console.log(customer.firstName + " " +customer.lastName);
+ let customerSimple: CustomerSimpleConstructor = new CustomerSimpleConstructor("Matt", "Qu");
+ console.log(customerSimple.firstName + " " +customerSimple.lastName);
+ customerSimple.firstName = "John";
+customerSimple.lastName = "Zhong";
+ console.log(customerSimple.firstName + " " +customerSimple.lastName);

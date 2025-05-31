@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Customer = void 0;
 class Customer {
     constructor(theFirst, theLast) {
         this._firstName = theFirst;
@@ -19,8 +21,4 @@ class Customer {
         return this._lastName;
     }
 }
-let customer = new Customer("Matt", "Qu");
-console.log(customer.firstName + " " + customer.lastName);
-customer.firstName = "Shelly";
-customer.lastName = "Wang";
-console.log(customer.firstName + " " + customer.lastName);
+exports.Customer = Customer;
